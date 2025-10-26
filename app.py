@@ -1,32 +1,8 @@
 import streamlit as st
 from openai import OpenAI
 
-# ---- PAGE CONFIG ----
-st.set_page_config(page_title="CodingTrix AI", page_icon="🤖", layout="wide")
-
-# ---- CUSTOM HEADER ----
-st.markdown("""
-    <style>
-    .main-header {
-        background-color: #0E1117; /* Dark background */
-        color: #1E90FF;            /* Accent color (blue) */
-        padding: 12px 25px;
-        font-size: 24px;
-        font-weight: bold;
-        font-family: 'Segoe UI', sans-serif;
-        border-bottom: 1px solid #333333;
-        text-align: left;
-        letter-spacing: 1px;
-    }
-    </style>
-
-    <div class="main-header">
-        CODINGTRIX AI
-    </div>
-""", unsafe_allow_html=True)
-
-#client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-#st.title("💬 CodingTrix GPT")
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+st.title("💬 CodingTrix GPT")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
