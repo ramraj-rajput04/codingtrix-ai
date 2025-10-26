@@ -2,7 +2,8 @@ import streamlit as st
 from openai import OpenAI
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-st.title("💬 CodingTrix AI Chatbot")
+st.title("💬 CodingTrix GPT")
+st.header("CodingTrix AI")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
